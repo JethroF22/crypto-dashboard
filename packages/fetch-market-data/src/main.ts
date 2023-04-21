@@ -11,8 +11,8 @@ app.get('/', async (req, res) => {
   try {
     const response = await getMarketData();
     console.log('response');
-    console.log(response.data);
-    res.send({ message: 'Hello API' });
+    console.log();
+    res.send(response.data);
   } catch (error) {
     console.log(error);
     res.status(400).send({
