@@ -3,7 +3,9 @@
     "plugin:@nrwl/nx/react-typescript",
     "next",
     "next/core-web-vitals",
-    "../../.eslintrc.json"
+    "../../.eslintrc.json",
+    "plugin:react/recommended",
+    "standard"
   ],
   "ignorePatterns": ["!**/*", ".next/**/*"],
   "overrides": [
@@ -18,11 +20,11 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "rules": {}
+      "rules": { "semi": ["error", "always"] }
     },
     {
       "files": ["*.js", "*.jsx"],
-      "rules": {}
+      "rules": { "semi": ["error", "always"] }
     }
   ],
   "rules": {
@@ -30,5 +32,6 @@
   },
   "env": {
     "jest": true
-  }
+  },
+  "plugins": ["react"]
 }

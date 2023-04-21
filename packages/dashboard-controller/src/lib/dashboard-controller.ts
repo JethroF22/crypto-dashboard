@@ -9,6 +9,6 @@ export async function getMarketData(
   const marketDataUrl = process.env.COINMARKET_CAP_MARKET_DATA_URL;
   const client = getClient();
   return client.get(
-    `${marketDataUrl}&limit=${numResults || 100}&sort=market_cap&sort_dir=desc`
+    `${marketDataUrl}&limit=${numResults || 10}&sort=market_cap&sort_dir=desc`
   );
 }
